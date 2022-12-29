@@ -1,0 +1,26 @@
+{
+  "name": "threejs-fiber-course",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently --names 'TAILWIND,VITE' 'npm run tailwatch' 'vite'",
+    "tailwatch": "npx tailwindcss -i ./src/style.css -o ./dist/style.min.css -m --watch",
+    "tailbuild": "npx tailwindcss -i ./src/style.css -o ./dist/style.min.css -m",
+    "build": "concurrently --names 'TAILWIND,VITE' 'npm run tailbuild' 'vite build' "
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
+    "postcss": "^8.4.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "vite": "^4.0.0"
+  }
+}
