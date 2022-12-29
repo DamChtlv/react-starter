@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently --names 'TAILWIND,VITE' 'npm run tailwatch' 'vite'",
-    "tailwatch": "npx tailwindcss -i ./src/style.css -o ./dist/style.min.css -m --watch",
-    "tailbuild": "npx tailwindcss -i ./src/style.css -o ./dist/style.min.css -m",
-    "build": "concurrently --names 'TAILWIND,VITE' 'npm run tailbuild' 'vite build' "
+    "dev": "concurrently --names 'VITE,TAILWIND' -c 'bgYellow.bold,bgCyan.bold' 'npm run vitedev' 'npm run tailwatch'",
+    "vitedev": "vite",
+    "tailwatch": "npx tailwindcss -i ./src/style.css -o ./dist/style.min.css --watch",
+    "tailbuild": "npx tailwindcss -i ./src/style.css -o ./dist/style.min.css --minify",
+    "build": "concurrently --names 'VITE,TAILWIND' -c 'bgYellow.bold,bgCyan.bold' 'vite build' 'npm run tailbuild'"
   },
   "dependencies": {
     "autoprefixer": "^10.4.13",
