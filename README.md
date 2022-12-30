@@ -1,2 +1,2 @@
 # React Starter
- Starter using VITE + React + TailwindCSS
+ Starter using PNPM + VITE + React + TailwindCSS
