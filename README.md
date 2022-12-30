@@ -1,2 +1,2 @@
-# threejs-react-starter
- Starter using VITE + React + TailwindCSS + ThreeJS
+# React Starter
+ Starter using VITE + React + TailwindCSS
